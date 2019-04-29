@@ -12,7 +12,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
@@ -25,7 +25,7 @@ export default {
   padding: 2rem;
 }
 body, html {
-  background: #666;
+  background: rgb(122, 24, 24);
   margin: 0;
   padding: 0;
 }
