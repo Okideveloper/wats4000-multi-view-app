@@ -2,6 +2,7 @@
   <div class="survey">
     <h1>New Member Survey</h1>
     <p>Please complete the new member survey.</p>
+    <!--This will give us a validation when we click submit-->
     <form v-on:submit.prevent="validateForm">
       <p
         class="error"
@@ -30,7 +31,7 @@
         Q3: What other topics interest you?
         <br>
 
-        <label v-for="(topicOptions,index) in topicOptions" :key="index">
+        <label v-for="(topic,index) in topicOptions" :key="index">
           <input type="checkbox" v-model="q3" :value="topic.value">
           {{ topic.text}}
         </label>
@@ -141,9 +142,11 @@ export default {
   padding: 1rem;
   color: #aa0000;
 }
+
 h1,
 h2 {
-  font-weight: normal;
+  font-family: Verdana;
+  font-weight: 600;
 }
 
 ul {
@@ -152,6 +155,6 @@ ul {
 }
 
 a {
-  color: #42b983;
+  color: #4244b9;
 }
 </style>

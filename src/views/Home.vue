@@ -4,7 +4,6 @@
       <h1>Join the Web Developers Club!</h1>
       <p>Sign up to access our special, secret page. Just create an account and answer a brief survey.</p>
 
-      <!-- TODO: Add an HTML element to display an error message for when the user submits invalid information. Use v-show to show/hide this message based on the validity of the form data. -->
       <p
         class="error"
         v-show="showError"
@@ -38,7 +37,7 @@
           <label for="passwordVerify">
             Verify Password
             <input
-              type="passwordVerify"
+              type="password"
               id="passwordVerify"
               v-model="passwordVerify"
             >
@@ -53,7 +52,8 @@
     <div class="success-message" v-show="!showForm">
       <h1>Thank you for signing up!</h1>
       <p>
-        Please a second and take our new membership survey. <router-link to="/survey">Click here</router-link>
+        Please a second and take our new membership survey.
+        <router-link to="/survey">Click here</router-link>
       </p>
     </div>
   </div>
@@ -80,6 +80,8 @@ export default {
         this.password === this.passwordVerify
       ) {
         this.showForm = false;
+      } else {
+        this.showError = true;
       }
 
       // Validate the form by checking the following values:

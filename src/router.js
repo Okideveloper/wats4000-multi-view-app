@@ -23,7 +23,7 @@ export default new Router({
       path: '/secret',
       name: 'secret',
       component: Secret
-    },
+    }
 
   ]
 })
